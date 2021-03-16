@@ -8,8 +8,9 @@ xhr.onload = function(){
   if(xhr.status == 200){
   //把抓到的資料加以運用
   var str = JSON.parse(xhr.responseText);
+  console.log(str);
   //選取 DOM，並渲染至網頁
-  document.querySelector('#ajax_data_name').textContent = str[0].names;
+  document.querySelector('#ajax_data_name').textContent = str.names;
   } else{
     console.log('資料讀取錯誤!!');
   }
